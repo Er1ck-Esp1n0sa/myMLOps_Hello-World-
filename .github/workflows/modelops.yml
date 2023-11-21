@@ -74,6 +74,9 @@ jobs:
         with:
           token: ${{secrets.OKTETO_TOKEN }}
 
+      - name: Debug KUBECONFIG
+        run: echo $KUBECONFIG
+
       - name: Deploy and Wait
         uses: okteto/actions/deploy@v1
         env:
