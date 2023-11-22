@@ -5,15 +5,17 @@ import os
 
 # TensorFlow
 import tensorflow as tf
- 
+
 print(tf.__version__)
 
 X = np.arange(1, 11, 1)  
 np.random.shuffle(X)
-y = 2.0 * X + 5.0  
+# y = 10.0 * X + 80.0  
+y = -0.5*X+4
 
 train_end = int(0.6 * len(X))
 test_start = int(0.8 * len(X))
+
 X_train, y_train = X[:train_end], y[:train_end]
 X_test, y_test = X[test_start:], y[test_start:]
 X_val, y_val = X[train_end:test_start], y[train_end:test_start]
