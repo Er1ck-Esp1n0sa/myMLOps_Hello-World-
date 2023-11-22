@@ -6,9 +6,6 @@ import requests
 SERVER_URL = 'https://linear-model-service-er1ck-esp1n0sa.cloud.okteto.net/v1/models/linear-model:predict'
 
 def make_prediction(inputs):
-    # x = int(inputs[0])
-    # y = x ** 2 + 1
-    # return {'predictions': [[y]]}
     predict_request = {'instances': [inputs]}
     response = requests.post(SERVER_URL, json=predict_request)
     response.raise_for_status()
