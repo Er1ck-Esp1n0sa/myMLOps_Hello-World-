@@ -19,10 +19,10 @@ def make_prediction(inputs):
     return prediction
 
 def main():
-    st.title('Calculador de Tiempo de Entrega')
+    st.title('Calculador de Tiempo de Entrega de un proyecto')
     st.title('y = mx + b')
 
-    x = st.number_input('Ingrese la distancia (en kilómetros):', min_value=0.0, step=1.0)
+    x = st.number_input('Ingrese el numero de lineas:', min_value=0.0, step=1.0)
 
     if st.button('Calcular'):
         # Hacer una solicitud al modelo en Okteto

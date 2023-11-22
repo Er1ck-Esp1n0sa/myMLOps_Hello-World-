@@ -15,13 +15,13 @@ def make_prediction(advertising_expenses):
 
 # Función principal
 def main():
-    st.title('Calculador de Ventas Estimadas')
+    st.title('Calculador de Ventas de Proyectos')
 
     # Entrada: Gasto en publicidad
-    advertising_expenses = st.number_input('Ingrese el gasto en publicidad:', min_value=0.0, step=1.0)
+    advertising_expenses = st.number_input('Ingrese numero de lineas de codigo:', min_value=0.0, step=1.0)
 
     # Botón para realizar la predicción
-    if st.button('Calcular Ventas Estimadas'):
+    if st.button('Calcular'):
         # Hacer la predicción utilizando el modelo
         prediction = make_prediction([advertising_expenses])
         
